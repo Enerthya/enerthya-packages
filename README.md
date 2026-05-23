@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Enerthya Banner" width="100%">
+  <img src="https://raw.githubusercontent.com/Enerthya/enerthya-packages/main/assets/banner.svg" alt="Enerthya Banner" width="100%">
 </p>
 
 <p align="center">

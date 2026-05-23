@@ -10,6 +10,15 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "keywords": [
+    "discord",
+    "bot",
+    "discord.js",
+    "utilities",
+    "logger",
+    "cooldowns",
+    "enerthya"
+  ],
   "files": ["dist"],
   "scripts": {
     "build": "tsc",

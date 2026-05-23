@@ -11,6 +11,14 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "keywords": [
+    "discord",
+    "bot",
+    "discord.js",
+    "enerthya",
+    "bundle",
+    "monorepo"
+  ],
   "files": ["dist"],
   "scripts": {
     "build": "tsc",

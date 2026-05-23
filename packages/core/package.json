@@ -10,6 +10,17 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "description": "Core framework for the Enerthya Discord bot — client, builder, registry, and command context",
+  "keywords": [
+    "discord",
+    "bot",
+    "discord.js",
+    "framework",
+    "typescript",
+    "enerthya",
+    "slash-commands",
+    "discord-bot"
+  ],
   "files": [
     "dist"
   ],
@@ -29,15 +40,6 @@
     "discord.js": "^14.16.0"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "discord.js": "^14.26.2",
-    "eslint": "^10.4.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
-    "husky": "^9.1.7",
-    "lint-staged": "^17.0.5",
-    "prettier": "^3.8.3",
-    "typescript-eslint": "^8.59.4",
-    "vitest": "^4.1.7"
+    "discord.js": "^14.26.2"
   }
 }
