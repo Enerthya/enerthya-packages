@@ -8,11 +8,27 @@
   "scripts": {
     "build": "npm run build -ws",
     "check": "npm run check -ws",
-    "publish": "npm publish -ws"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,js,json,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "devDependencies": {
+    "@types/node": "^22.16.4",
     "typescript": "^5.9.3",
-    "@types/node": "^22.16.4"
+    "vitest": "^1.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enerthya/enerthya-packages.git"
   },
   "engines": {
     "node": ">=20.12.0"

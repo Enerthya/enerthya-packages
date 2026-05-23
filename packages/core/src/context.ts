@@ -7,6 +7,7 @@ import {
   InteractionReplyOptions,
   Message,
   MessagePayload,
+  TextBasedChannel,
   User,
 } from 'discord.js';
 
@@ -19,7 +20,7 @@ export class CommandContext {
   public readonly guild: Guild | null;
   public readonly user: User;
   public readonly member: GuildMember | null;
-  public readonly channel: any;
+  public readonly channel: TextBasedChannel | null;
 
   private readonly source: Source;
 

@@ -61,7 +61,13 @@ export class EnerthyaBuilder {
     if (!this.client) return;
 
     for (const evt of this.registry.events.items) {
-      const handler = (...args: unknown[]) => evt.execute(this.client!, ...args);
+      const handler = (...args: unknown[]) => {
+        try {
+          return evt.execute(this.client!, ...args);
+        } catch (err) {
+          console.error(`[Event] ${evt.event}:`, err);
+        }
+      };
 
       if (evt.once) {
         this.client.once(evt.event, handler as never);
@@ -78,7 +84,7 @@ export class EnerthyaBuilder {
       if (message.author.bot) return;
       if (!message.content.startsWith(this.client!.prefix)) return;
 
-      const args = message.content.slice(this.client!.prefix.length).split(/ +/);
+      const args = message.content.slice(this.client!.prefix.length).split(/ +/).filter(Boolean);
       const commandName = args.shift()?.toLowerCase();
       if (!commandName) return;
 
@@ -86,7 +92,10 @@ export class EnerthyaBuilder {
       if (!decl) return;
 
       const ctx = new CommandContext(message, args);
-      Promise.resolve(decl.execute(ctx)).catch((err: unknown) => console.error(`[Prefix] ${commandName}:`, err));
+      Promise.resolve(decl.execute(ctx)).catch((err: unknown) => {
+        console.error(`[Prefix] ${commandName}:`, err);
+        ctx.reply('An error occurred while executing this command.').catch(() => {});
+      });
     });
   }
 

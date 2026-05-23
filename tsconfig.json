@@ -3,7 +3,7 @@
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "strict": false,
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -12,5 +12,7 @@
     "declarationMap": true,
     "sourceMap": true,
     "types": ["node"]
-  }
+  },
+  "include": ["packages/*/src"],
+  "exclude": ["**/*.test.ts", "**/dist/", "**/node_modules/"]
 }

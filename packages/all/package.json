@@ -1,6 +1,7 @@
 {
-  "name": "@enerthya/utils",
+  "name": "@enerthya/all",
   "version": "0.1.0",
+  "description": "Bundle package — install everything with a single dependency",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,19 +16,14 @@
     "build": "tsc",
     "check": "tsc --noEmit"
   },
+  "dependencies": {
+    "@enerthya/core": "^0.1.0",
+    "@enerthya/utils": "^0.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Enerthya/enerthya-packages.git",
-    "directory": "packages/utils"
+    "directory": "packages/all"
   },
-  "peerDependencies": {
-    "discord.js": "^14.16.0"
-  },
-  "dependencies": {
-    "pino": "^8.21.0",
-    "pino-pretty": "^11.3.0"
-  },
-  "devDependencies": {
-    "discord.js": "^14.26.2"
-  }
+  "license": "MIT"
 }
