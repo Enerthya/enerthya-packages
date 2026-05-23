@@ -33,8 +33,10 @@ const files: Record<string, string> = {
         start: 'node dist/index.js',
       },
       dependencies: {
-        '@enerthya/core': '^0.1.2',
-        '@enerthya/utils': '^0.1.2',
+        '@enerthya/core': '^0.1.3',
+        '@enerthya/utils': '^0.1.3',
+        '@enerthya/discord': '^0.1.3',
+        '@enerthya/discord-ui': '^0.1.3',
         'discord.js': '^14.16.0',
       },
       devDependencies: {

@@ -18,8 +18,11 @@ Monorepo for the Enerthya Discord bot framework — modular, type-safe, and buil
 | Package | Description |
 |---------|-------------|
 | [`@enerthya/all`](packages/all) | Bundle package — install everything with a single dependency |
-| [`@enerthya/core`](packages/core) | Application framework — client, builder, registry, command context |
-| [`@enerthya/utils`](packages/utils) | General-purpose utilities — logging, cooldowns, formatting helpers |
+| [`@enerthya/core`](packages/core) | Application framework — client, builder, registry, middleware, scheduler |
+| [`@enerthya/discord`](packages/discord) | Discord.js helpers — finders, embed builder, component builders, guards, URL parsers |
+| [`@enerthya/discord-ui`](packages/discord-ui) | Interactive UI — pagination, confirm prompts, multimenu |
+| [`@enerthya/discord-events`](packages/discord-events) | Extended Discord events — audit-log based role/channel/member/timeout/kick/ban events |
+| [`@enerthya/utils`](packages/utils) | General-purpose utilities — logging, cooldowns, arrays, strings, validation, format, pagination |
 
 ## Getting Started
 
