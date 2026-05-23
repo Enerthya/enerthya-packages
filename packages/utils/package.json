@@ -1,0 +1,28 @@
+{
+  "name": "@enerthya/utils",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "discord.js": "^14.16.0"
+  },
+  "dependencies": {
+    "pino": "^8.21.0",
+    "pino-pretty": "^11.3.0"
+  },
+  "devDependencies": {
+    "discord.js": "^14.26.2"
+  }
+}

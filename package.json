@@ -1,0 +1,20 @@
+{
+  "name": "@enerthya/packages",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -ws",
+    "check": "npm run check -ws",
+    "publish": "npm publish -ws"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^22.16.4"
+  },
+  "engines": {
+    "node": ">=20.12.0"
+  }
+}
