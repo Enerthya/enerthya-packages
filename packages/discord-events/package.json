@@ -1,6 +1,6 @@
 {
   "name": "@enerthya/discord-events",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Extended Discord events for Enerthya — role/channel/member events from audit logs",
   "type": "module",
   "main": "./dist/index.js",
