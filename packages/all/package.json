@@ -1,6 +1,6 @@
 {
   "name": "@enerthya/all",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Bundle package — install everything with a single dependency",
   "type": "module",
   "main": "./dist/index.js",
