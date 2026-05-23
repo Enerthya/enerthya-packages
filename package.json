@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build -w @enerthya/core -w @enerthya/utils && npm run build -w @enerthya/all",
+    "build": "npm run build -w @enerthya/core -w @enerthya/utils && npm run build -w @enerthya/all && npm run build -w create-enerthya",
     "check": "npm run check -ws",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

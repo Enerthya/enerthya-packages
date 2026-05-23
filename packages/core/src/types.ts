@@ -1,15 +1,19 @@
 import {
   ApplicationCommandOptionData,
-  PermissionResolvable,
+  ApplicationCommandSubCommandData,
+  ApplicationCommandSubGroupData,
+  AutocompleteInteraction,
+  CacheType,
   ClientEvents,
   Interaction,
-  CacheType,
+  ModalSubmitInteraction,
+  PermissionResolvable,
 } from 'discord.js';
 import { CommandContext } from './context.js';
 
 export type CommandHandler = (ctx: CommandContext) => unknown;
-
 export type MenuType = 'USER' | 'MESSAGE';
+export type MiddlewareFn = (ctx: CommandContext, next: () => Promise<unknown>) => unknown;
 
 export interface CommandDeclaration {
   name: string;
@@ -32,6 +36,15 @@ export interface CommandDeclaration {
     ephemeral?: boolean;
     options?: ApplicationCommandOptionData[];
   };
+  subcommands?: SubcommandDeclaration[];
+  execute: CommandHandler;
+}
+
+export interface SubcommandDeclaration {
+  name: string;
+  description: string;
+  group?: string;
+  options?: ApplicationCommandOptionData[];
   execute: CommandHandler;
 }
 
@@ -68,10 +81,31 @@ export interface ComponentDeclaration {
   execute: (interaction: Interaction<CacheType>, params: Record<string, unknown>) => unknown;
 }
 
+export interface AutocompleteDeclaration {
+  name: string;
+  execute: (interaction: AutocompleteInteraction<CacheType>) => unknown;
+}
+
+export interface ModalDeclaration {
+  customId: string;
+  title: string;
+  components: import('discord.js').ActionRowData<
+    import('discord.js').ModalActionRowComponentData
+  >[];
+  execute: (interaction: ModalSubmitInteraction<CacheType>) => unknown;
+}
+
 export interface BuilderConfig {
   token: string;
   prefix?: string;
   owners?: string[];
   mongoUri?: string;
   guildId?: string;
+}
+
+export interface ScheduledTask {
+  name: string;
+  interval: number;
+  execute: () => unknown;
+  runOnStart?: boolean;
 }

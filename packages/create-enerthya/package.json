@@ -1,0 +1,29 @@
+{
+  "name": "create-enerthya",
+  "version": "0.1.2",
+  "description": "Scaffold a new Enerthya Discord bot project",
+  "type": "module",
+  "bin": {
+    "create-enerthya": "./dist/cli.js"
+  },
+  "files": ["dist", "template"],
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.16.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enerthya/enerthya-packages.git",
+    "directory": "packages/create-enerthya"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
