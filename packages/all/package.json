@@ -25,5 +25,8 @@
     "url": "git+https://github.com/Enerthya/enerthya-packages.git",
     "directory": "packages/all"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT"
 }
